@@ -11,7 +11,7 @@ def home():
 @app.route('/tahmin',methods=['POST','GET'])
 def cicek_tahmin():
     if request.method=='POST':
-        print " * " * 5 + "Susen cicegi tahmin programi" + " * " * 5
+        #print " * " * 5 + "Susen cicegi tahmin programi" + " * " * 5
 
         result=request.form
         sepal_length = result['sepal_length']
@@ -30,7 +30,7 @@ def cicek_tahmin():
         tahmin_sonucu = model.predict(sonuclar)
         print "Tahmin edilen cicek turu: %s" %(tahmin_sonucu)
         
-        print " * " * 5 + "Susen cicegi tahmin programi" + " * " * 5
+        #print " * " * 5 + "Susen cicegi tahmin programi" + " * " * 5
         return render_template('result.html', prediction = tahmin_sonucu)
 
     
