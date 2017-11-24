@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<title>Süsen Çiçeği Tahmin Uygulaması</title>
+<meta charset="ISO-8859-9">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/w3.css">
+<link rel="stylesheet" href="static/temp.css">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+    background-image: url('static/iris.png');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+</style>
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    Süsen Çiçeği Tahmin Uygulaması
+  </div>
+  <div class="w3-display-middle">
+
+<body>
+<p><h4>Çicege ait değerleri giriniz:   </h4></p> <br>
+<form action = "/tahmin" method="POST">
+<p> Çanakyaprak Uzunluğu:<input name="sepal_length" type ="number"  /> </p>
+<p> Çanakyaprak Genişliği: <input name="sepal_width" type ="number"  /> </p>
+<p> Taçyaprak Uzunluğu: <input name="petal_length" type ="number"  /> </p>
+<p> Taçyaprak Genişliği: <input name="petal_width" type ="number"  /> </p>
+<p> <input type ="submit" value="Gonder" /> </p>
+</form>
+</body>
+</html>
