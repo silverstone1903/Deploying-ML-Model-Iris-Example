@@ -20,15 +20,15 @@ def cicek_tahmin():
         petal_width = result['petal_width']
         sonuclar = np.array([sepal_length, sepal_width, petal_length, petal_width])
         sonuclar = sonuclar.reshape(1,-1)
-        print "Girdiginiz degerler %s" %sonuclar
+        #print "Girdiginiz degerler %s" %sonuclar
 
         
-        print("Model yukleniyor... Tahmin yapiliyor...")
+        #print("Model yukleniyor... Tahmin yapiliyor...")
         
         from sklearn.externals import joblib
         model = joblib.load('logmodel.pkl')
         tahmin_sonucu = model.predict(sonuclar)
-        print "Tahmin edilen cicek turu: %s" %(tahmin_sonucu)
+        #print "Tahmin edilen cicek turu: %s" %(tahmin_sonucu)
         
         #print " * " * 5 + "Susen cicegi tahmin programi" + " * " * 5
         return render_template('result.html', prediction = tahmin_sonucu)
